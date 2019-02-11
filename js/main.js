@@ -1,24 +1,30 @@
-import HomeComponent from './components/HomeComponent.js'; //this is like doing a php include
-import SignUpComponent from './components/SignUpComponent.js'; //this is like doing a php include
+//Components
+
+import promoComponent from './components/promoComponent.js'; 
+import formComponent from './components/formComponent.js';
+
 
 const routes = [
-    { path: "/", name: "home", component: HomeComponent },
-    { path: "/home", name: "Home", component: Indexomponent },
-    { path: "/signup", name: "Sign-Up", component: SignUpComponent}
+    { path: '/', redirect: {name: 'promotions'}},
+    { path: '/promotions', name: 'promotions', component: promoComponent },
+    { path: '/form', name: 'form', component: formComponent }
 ];
 
-const router = new VueRouter({
+const router = new VueRouter ({
     routes
-  });
+});
 
-const vm = new Vue({
-  // el: '#app',
+const vm = new Vue ({
+    el: '#app',
 
-  data: {},
+    data: {
+        message: "Hi from vue!",
+    },
 
-  mounted() { },
+    created: function(){
+        console.log('hello hello');
+    },
 
-  methods: {},
-
-  router: router
+    router: router
 }).$mount("#app");
+
