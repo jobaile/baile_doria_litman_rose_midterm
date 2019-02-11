@@ -1,0 +1,30 @@
+{
+  "name": "ontario_summer",
+  "version": "1.0.0",
+  "description": "Ontario Summer - A Tourism Campaign",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jobaile/baile_doria_litman_rose_midterm.git"
+  },
+  "keywords": [
+    "midterm",
+    "hackathon",
+    "tourism",
+    "campaign",
+    "ontario",
+    "summer"
+  ],
+  "author": "Joanna Baile, Fernando D'Oria, Logan Litman, Carter Rose",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jobaile/baile_doria_litman_rose_midterm/issues"
+  },
+  "homepage": "https://github.com/jobaile/baile_doria_litman_rose_midterm#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
