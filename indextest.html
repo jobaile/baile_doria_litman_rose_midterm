@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue.js Single-File JavaScript Component Demo</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ 
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+<div id="promocontainer" class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav_section">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div>
+          <div class="row">
+              <div class="embed-responsive embed-responsive-16by9">
+                  <video autoplay muted loop id="promo_video">
+                      <source src="videos/OS_nologo.mp4" type="video/mp4">
+                  </video>
+              </div>
+          </div>
+      </div>
+
+</div>
+
+<div id="aboutstart" class="container-fluid">
+  <div class="row">
+    <div class="col" id="about_leftside"></div>
+    <div class="col" id="about-rightside"></div>
+  </div>
+</div>
+
+
+
+<div id="fact1" class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-6 align-middle" id="fact1all">
+      <p class="factleft">Ontario makes up about one fifth of the world's fresh water</p>
+      <img class="iconright" src="images/icon1.png" alt="icon1">
+    </div>
+  
+  </div>
+</div>
+
+<div id="image1" class="container-fluid">
+    <div class="row">
+      <div class="col justify-content-center">
+      </div>
+    </div>
+</div>
+
+<div id="fact2" class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-8 align-middle" id="fact2all">
+        <p class="factright">Ontario's largest hiking trail is the Ganaraska Trail, which spans for over 500km.</p>
+        <img class="iconleft" src="images/icon1.png" alt="icon1">
+      </div>
+    
+    </div>
+</div>
+  
+  <div id="image2" class="container-fluid">
+      <div class="row">
+        <div class="col justify-content-center">
+        </div>
+      </div>
+  </div>
+
+  <div id="fact3" class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-6 align-middle" id="fact3all">
+          <p class="factleft">Toronto is home to the third tallest building in the world, the CN tower.</p>
+          <img class="iconright" src="images/icon1.png" alt="icon1">
+        </div>
+      
+      </div>
+  </div>
+    
+    <div id="image3" class="container-fluid">
+        <div class="row">
+          <div class="col justify-content-center">
+
+          </div>
+        </div>
+    </div>
+    
+    <div id="fact4" class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-6 align-middle" id="fact4all">
+            <p class="factright">Muskoka is home to over 1,600 lakes and 3,000 cottages.</p>
+            <img class="iconleft" src="images/icon1.png" alt="icon1">
+          </div>
+        
+        </div>
+    </div>
+      
+      <div id="image4" class="container-fluid">
+          <div class="row">
+            <div class="col justify-content-center">
+
+            </div>
+          </div>
+      </div>
+
+      <footer id="footer"  class=" footercon">
+        
+        <div class="row">
+          <div class="col">
+            <img src="images/logo.svg" id="footerlogo">
+            <ul id="footernav">
+              <li>HOME</li>
+              <li>ABOUT</li>
+              <li>SUBSCRIBE</li>
+              <li>HELP</li>
+            </ul>
+          </div>
+        </div>
+
+        
+
+        <div class="row">
+          <div class="col"><img src="images/skyline.png" width="100%"></div>
+        </div>
+
+        <div class="row">
+          <div class="col bottom-left"><p>Ontario Summer 2019 Copyright Privacy Policy</p></div>
+        </div>
+
+      </footer>
+
+
+
+
+
+  <script type="module" src="js/main.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
