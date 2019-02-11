@@ -1,0 +1,6 @@
+//Before working through SASS, don't forget to add this line to terminal:
+// sass --watch sass/main.scss:css/master.css --style compressed
+
+//IMPORT MODULES
+@import 'modules/_vars';
+@import 'modules/_mixins';
