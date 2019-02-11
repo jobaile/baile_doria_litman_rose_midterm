@@ -12,6 +12,7 @@ function userSub($fname, $lname, $email, $country) {
 		)
 	);
 
+	//This will update first name, last name, country and last updated time when using an existing email
 	if($email_exist_set->fetchColumn() > 0) {
 
 		$last_update_query = 'UPDATE tbl_user SET firstname = :firstname, lastname = :lastname, country = :country, lastupdate = CURRENT_TIMESTAMP WHERE email = :email';
@@ -27,9 +28,10 @@ function userSub($fname, $lname, $email, $country) {
 
 	} else {
 
-		$insert_user_query = "INSERT INTO tbl_user(firstname, lastname, email, country) VALUES (:firstname, :lastname, :email, :country)";
-		$insert_user_set = $pdo->prepare($insert_user_query);
-		$insert_user_set->execute(
+		//insert subscriber
+		$insert_sub_query = "INSERT INTO tbl_user(firstname, lastname, email, country) VALUES (:firstname, :lastname, :email, :country)";
+		$insert_sub_set = $pdo->prepare($insert_sub_query);
+		$insert_sub_set->execute(
 			array(
 				":firstname"=>$fname,
 				":lastname"=>$lname,
