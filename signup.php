@@ -2,14 +2,14 @@
 	require_once('admin/config.php');
 
 	if(isset($_POST['submit'])){
-		$firstname = trim($_POST['first-name']);
-		$lastname = trim($_POST['last-name']);
+		$fname = trim($_POST['first-name']);
+		$lname = trim($_POST['last-name']);
 		$email = trim($_POST['email']);
 		$country = $_POST['country'];
-		if(empty($firstname) || empty($lastname) || empty($email) | empty($country)){
+		if(empty($fname) || empty($lname) || empty($email) | empty($country)){
 			$message = "Please fill in the required fields.";
 		}else{
-			$result = userSub($firstname, $lastname, $email, $country);
+			$result = userSub($fname, $lname, $email, $country);
 			$message = $result;
 		}
 	}
@@ -49,9 +49,10 @@
 		<label>Email:</label>
 		<input type="text" name="email" value=""><br><br>
 
-		<label for="country">Country</label>      
-                <select id="country" name="country" class="form-control">
-                <option value="Afghanistan">Afghanistan</option>
+		<label for="country">Country:</label>      
+        <select name="country">
+            <option value=""></option>
+            <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>
@@ -89,7 +90,7 @@
                 <option value="Burundi">Burundi</option>
                 <option value="Cambodia">Cambodia</option>
                 <option value="Cameroon">Cameroon</option>
-                <option value="Canada" selected="selected">Canada</option>
+                <option value="Canada">Canada</option>
                 <option value="Cape Verde">Cape Verde</option>
                 <option value="Cayman Islands">Cayman Islands</option>
                 <option value="Central African Republic">Central African Republic</option>
@@ -295,9 +296,7 @@
                 <option value="Yemen">Yemen</option>
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
-		</select><br><br>
-
-
+        </select>
                 <button type="submit" name="submit">Subscribe</button>
 	</form>
 

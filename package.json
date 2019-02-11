@@ -26,5 +26,8 @@
   "homepage": "https://github.com/jobaile/baile_doria_litman_rose_midterm#readme",
   "devDependencies": {
     "gulp": "^4.0.0"
+  },
+  "dependencies": {
+    "gulp-sass": "^4.0.2"
   }
 }
