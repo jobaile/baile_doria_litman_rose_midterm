@@ -3,16 +3,16 @@ export default {
   <section>
     <form method="post">
     <label>First Name:</label>
-    <input type="text" name="first-name" value="" required><br><br>
+    <input v-model="input.firstname" type='text' name="firstname" value=""><br><br>
 
     <label>Last Name:</label>
-    <input type="text" name="last-name" value="" required><br><br>
+    <input v-model="input.lastname" type='text' name="lastname" value=""><br><br>
 
     <label>Email:</label>
-    <input type="text" name="email" value=""><br><br>
+    <input v-model="input.email" type="text" name="email" value=""><br><br>
 
     <label for="country">Country:</label>      
-        <select name="country">
+        <select v-model="input.country">
             <option value=""></option>
             <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
@@ -259,18 +259,60 @@ export default {
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
         </select>
-                <button type="submit" name="submit">Subscribe</button>
+        <div>
+          <button v-on:click="subscribe()" type='submit' name='submit'>Subscribe</button>
+        </div>
+        </form>
     </form>
   </section>
   `,
 
   data() {
-      return{
-          message: "This is from formComponent",
-      }
+    return {
+      input: {
+        firstname: "",
+        lastname: "",
+        email: "",
+        country: ""
+      },
+    };
   },
 
   methods: {
+    subscribe() {
+      if (this.input.firstname !== "" && this.input.lastname !== "" && this.input.email !== "" && this.input.country !== "") {
+        
+        let formData = new FormData(); //this will make sure the stuff goes through the database
 
+        formData.append("firstname", this.input.firstname); //$fname
+        formData.append("lastname", this.input.lastname); //$lname
+        formData.append("email", this.input.email); //$email
+        formData.append("country", this.input.country); //$country
+
+        let url = `./admin/sign-up.php`; //links to the php script
+        fetch(url, {
+          method: "POST",
+          body: formData
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data);
+            if (data == "Subscription Failed") {
+              console.log("Authentication failed, try again");
+            } else {
+              this.input.firstname = "";
+              this.input.lastname = "";
+              this.input.email = "";
+              this.input.countries = "";
+              console.log("New Subscription");
+            }
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      } else {
+        console.log("Please fill in required fields");
+      }
+    }
   }
 }
