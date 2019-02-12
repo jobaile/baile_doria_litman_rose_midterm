@@ -27,7 +27,6 @@ function userSub($fname, $lname, $email, $country) {
 	);
 
 	//This will update first name, last name, country and last updated time when using an existing email
-	//if($email_exist_set->fetchColumn() > 0) {
 	if($email_exist_set->fetchColumn()){
 		old_subscriber($fname, $lname, $email); //this is for old subscribers
 		$last_update_query = 'UPDATE tbl_user SET firstname = :firstname, lastname = :lastname, country = :country, lastupdate = CURRENT_TIMESTAMP WHERE email = :email';
