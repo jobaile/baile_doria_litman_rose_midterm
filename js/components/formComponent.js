@@ -1,20 +1,33 @@
 export default {
   template: `
   <section>
-    <form method="post">
-    <label>First Name:</label>
-    <input v-model="input.firstname" type='text' name="firstname" value=""><br><br>
+    <div class="row">
+        <div class="container-fluid" id="footer-top">
+            <h2 id="up-to-date">STAY UP<br>TO DATE.</h2>
+        </div>
+    </div>
 
-    <label>Last Name:</label>
-    <input v-model="input.lastname" type='text' name="lastname" value=""><br><br>
+    <div class="row">
+            <div class="container-fluid" id="form-slash">
+                <h3 id="register-now">Register now</h3>
 
-    <label>Email:</label>
-    <input v-model="input.email" type="text" name="email" value=""><br><br>
+                <form method="post" class="form-inline justify-content-center">
 
-    <label for="country">Country:</label>      
-        <select v-model="input.country">
-            <option value=""></option>
-            <option value="Afghanistan">Afghanistan</option>
+                <div class="col-xs-12 col-md-6 forminput">
+                    <input v-model="input.firstname" type='text' name="firstname" value="" required placeholder="first name" class="form-field">
+                </div>
+
+                <div class="col-xs-12 col-md-6 forminput">
+                    <input v-model="input.lastname" type='text' name="lastname" value=""required placeholder="last name" class="form-field">      
+                </div>
+
+                <div class="col-xs-12 col-md-6 forminput">
+                <input v-model="input.email" type="text" name="email" placeholder="email" class="form-field">
+                </div>
+      
+        <select v-model="input.country" name="country" class="styled-select black rounded1 margin-top">
+            <option value="">Select your country..</option>
+                <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>
@@ -259,8 +272,8 @@ export default {
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
         </select>
-        <div>
-          <button v-on:click="subscribe()" type='submit' name='submit'>Subscribe</button>
+        <div class="col-12 justify-content-center form-inline">
+        <button v-on:click="subscribe()" name="submit" id="submit">SUBSCRIBE</button>
         </div>
         </form>
     </form>
