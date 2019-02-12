@@ -54,8 +54,9 @@ body {overflow-x: hidden;}
 {
     float: left;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.7em;
     max-width: 70%;
+    font-family: Futura-pt, futura, sans-serif;
 }
 
 
@@ -63,7 +64,8 @@ body {overflow-x: hidden;}
 .iconright
 {
     float: right;
-    max-width: 30%;
+    max-width: 20%;
+    margin-left: 5%;
     
 }
 
@@ -71,14 +73,16 @@ body {overflow-x: hidden;}
 {
     float: right;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.7em;
     max-width: 70%;
+    font-family: Futura-pt, futura, sans-serif;
 }
 
 .iconleft
 {
     float: left;
-    max-width: 30%;
+    max-width: 20%;
+    margin-left: 5%;
     
 }
 
@@ -98,6 +102,7 @@ body {overflow-x: hidden;}
     margin-top: 20%;
     margin-bottom: 50%;
     margin-left: 20%;
+    font-family: Futura-pt, futura, sans-serif;
 }
 
 #about_rightside h3
@@ -107,6 +112,7 @@ body {overflow-x: hidden;}
     margin-top: 130px;
     margin-bottom: 40px;
     font-size: 2.2em;
+    font-family: Futura-pt, futura, sans-serif;
 }
 
 
@@ -199,29 +205,19 @@ body {overflow-x: hidden;}
     display: inline;
     color: white;
     padding-left: 20px;
+    color: #f05d32;
 }
 
 .footercon
 {
     position: relative;
-    background-color: #f05d32;
+    background-image: url(../images/footer_girls.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
-.bottom-left {
-    position: absolute;
-    bottom: 1px;
-    left: 16px;
-  }
 
-.bottom-left p 
-{
-    color: #f05d32;
-}
 
-.noflex
-{
-    margin-left: auto;
-    order: 2;
-    margin-right: 30px;
-}
 
