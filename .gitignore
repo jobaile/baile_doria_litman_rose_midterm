@@ -5,3 +5,4 @@ node_modules
 *.psd
 extra.php
 sign-up1.php
+.sass-cache
