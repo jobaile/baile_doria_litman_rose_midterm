@@ -23,7 +23,9 @@ export default {
 
     <div class="col-7 text-center" id="about_rightside">
       <h3>SUBSCRIBE TO LEARN MORE</h3>
+      <router-link :to="{ path: '/signup'}">
       <button type="button" class="btn btn-outline-dark">CLICK HERE</button>
+      </router-link>
     </div>
   </div>
 </div>

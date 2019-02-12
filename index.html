@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ontario Summer</title>
+  <title>Ontario Summer | Ontario Tourism</title>
 
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://use.typekit.net/bln4yuu.css"> <!--Futura Font-->
@@ -23,20 +23,22 @@
   <!-- Vue Start -->
   <main id="app">
     <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-          <a class="navbar-brand" href="#">Navbar</a>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg bg-light fixed-top">
+          <a class="navbar-brand" href="#"><img src="images/logo.svg" alt="logo" id="navlogo"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav ml-auto">
                   <div class="nav-items">
-                      <router-link :to="{ path: '/'}">Home</router-link>
-                      <router-link :to="{ path: '/form'}">Register</router-link>
+                      <router-link :to="{ path: '/'}" class="nav_item">HOME</router-link>
+                      <router-link :to="{ path: '/signup'}" class="nav_item">SUBSCRIBE</router-link>
                   </div>
               </div>
           </div>
       </nav>
+      </div>
       <!-- Navbar end -->
       
     <transition name="fade" mode="out-in">
@@ -49,9 +51,13 @@
           <div class="col well">
             <img src="images/logo-orange.svg" id="footerlogo">
             <ul class="noflex" id="footernav">
-              <a href="#promocontainer"><li>HOME</li></a>
+                <router-link :to="{ path: '/'}">
+                  <a><li>HOME</li></a>
+                </router-link>
               <a href="#aboutstart"><li>ABOUT</li></a>
-              <a href="#"><li>SUBSCRIBE</li></a>
+              <router-link :to="{ path: '/signup'}">
+                <a><li>SUBSCRIBE</li></a>
+              </router-link>
               <a href="#"><li>HELP</li></a>
             </ul>
           </div>
