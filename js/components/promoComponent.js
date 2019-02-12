@@ -1,16 +1,20 @@
 export default {
-    template: `
-    <h1>Promotions Page</h1>
-    <button>Hello</button>
-    `,
-  
-    data() {
-        return{
-            message: "This is from formComponent",
-        }
-    },
-  
-    methods: {
-  
-    }
+  template: `
+    <section>
+      <h2>You're on the Promotions page</h2>
+      <hr>
+      <h3>Nandos First Edit</h3>
+      <p>Hello</p>
+    </section>
+  `,
+
+  data() {
+      return{
+          message: "This is from promoComponent",
+      }
+  },
+
+  methods: {
+
   }
+}

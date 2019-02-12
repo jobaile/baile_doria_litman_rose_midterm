@@ -1,20 +1,33 @@
 export default {
   template: `
   <section>
-    <form method="post">
-    <label>First Name:</label>
-    <input type="text" name="first-name" value="" required><br><br>
+    <div class="row">
+        <div class="container-fluid" id="footer-top">
+            <h2 id="up-to-date">STAY UP<br>TO DATE.</h2>
+        </div>
+    </div>
 
-    <label>Last Name:</label>
-    <input type="text" name="last-name" value="" required><br><br>
+    <div class="row">
+            <div class="container-fluid" id="form-slash">
+                <h3 id="register-now">Register now</h3>
 
-    <label>Email:</label>
-    <input type="text" name="email" value=""><br><br>
+                <form method="post" class="form-inline justify-content-center">
 
-    <label for="country">Country:</label>      
-        <select name="country">
-            <option value=""></option>
-            <option value="Afghanistan">Afghanistan</option>
+                <div class="col-xs-12 col-md-6 forminput">
+                    <input v-model="input.firstname" type='text' name="firstname" value="" required placeholder="first name" class="form-field">
+                </div>
+
+                <div class="col-xs-12 col-md-6 forminput">
+                    <input v-model="input.lastname" type='text' name="lastname" value=""required placeholder="last name" class="form-field">      
+                </div>
+
+                <div class="col-xs-12 col-md-6 forminput">
+                <input v-model="input.email" type="text" name="email" placeholder="email" class="form-field">
+                </div>
+      
+        <select v-model="input.country" name="country" class="styled-select black rounded1 margin-top">
+            <option value="">Select your country..</option>
+                <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>
@@ -259,18 +272,60 @@ export default {
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
         </select>
-                <button type="submit" name="submit">Subscribe</button>
+        <div class="col-12 justify-content-center form-inline">
+        <button v-on:click="subscribe()" name="submit" id="submit">SUBSCRIBE</button>
+        </div>
+        </form>
     </form>
   </section>
   `,
 
   data() {
-      return{
-          message: "This is from formComponent",
-      }
+    return {
+      input: {
+        firstname: "",
+        lastname: "",
+        email: "",
+        country: ""
+      },
+    };
   },
 
   methods: {
+    subscribe() {
+      if (this.input.firstname !== "" && this.input.lastname !== "" && this.input.email !== "" && this.input.country !== "") {
+        
+        let formData = new FormData(); //this will make sure the stuff goes through the database
 
+        formData.append("firstname", this.input.firstname); //$fname
+        formData.append("lastname", this.input.lastname); //$lname
+        formData.append("email", this.input.email); //$email
+        formData.append("country", this.input.country); //$country
+
+        let url = `./admin/sign-up.php`; //links to the php script
+        fetch(url, {
+          method: "POST",
+          body: formData
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data);
+            if (data == "Subscription Failed") {
+              console.log("Authentication failed, try again");
+            } else {
+              this.input.firstname = "";
+              this.input.lastname = "";
+              this.input.email = "";
+              this.input.countries = "";
+              console.log("New Subscription");
+            }
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      } else {
+        console.log("Please fill in required fields");
+      }
+    }
   }
 }

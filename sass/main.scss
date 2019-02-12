@@ -71,13 +71,10 @@ body {
 
 // Select styles
 
-/* -------------------- Page Styles (not required) */
 div {
     margin: 20px;
   }
   
-  /* -------------------- Select Box Styles: bavotasan.com Method (with special adaptations by ericrasch.com) */
-  /* -------------------- Source: http://bavotasan.com/2011/style-select-box-using-only-css/ */
   .styled-select {
     margin-left: 30px;
     color: $white;
@@ -116,14 +113,11 @@ div {
   }
 
 
-  
-  /* -------------------- Colors: Text */
   .slate select {
     color: #000;
   }
 
   
-// Select styles end
 
 #submit {
     color: $white;
