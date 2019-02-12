@@ -9,64 +9,112 @@ body {overflow-x: hidden;}
 
 #aboutstart
 {
-    background-color: blue;
+    background-image: url(../images/kayak.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
     height: 400px;
+    overflow: hidden;
+}
+
+.well 
+{
+    display: flex;
+    align-items: center;
 }
 
 #fact1all
 {
     
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 #fact2all
 {
     
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 #fact3all
 {
     
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 #fact4all
 {
 
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .factleft
 {
     float: left;
+    color: white;
+    font-size: 1.5em;
+    max-width: 70%;
 }
+
+
 
 .iconright
 {
     float: right;
+    max-width: 30%;
+    
 }
 
 .factright
 {
     float: right;
+    color: white;
+    font-size: 1.5em;
+    max-width: 70%;
 }
 
 .iconleft
 {
     float: left;
+    max-width: 30%;
+    
 }
 
 #about_leftside
 {
     -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-    background-color: red;
-    height: 400px;
+    background-color: rgba(3, 55, 79, 0.72)
+}
+
+#about_leftside h2
+{
+    color: white;
+    font-size: 3.2em;
+    text-align: left;
+    max-width: 50%;
+    margin-top: 20%;
+    margin-bottom: 50%;
+    margin-left: 20%;
+}
+
+#about_rightside h3
+{
+    color: #033750;
+    text-align: center;
+    margin-top: 130px;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+}
+
+
+
+#sub_button
+{
+    background-color: #033750;
+    
 }
 
 #fact1
@@ -78,7 +126,7 @@ body {overflow-x: hidden;}
 
 #image1
 {
-    background-image: url(../images/leaf.jpg);
+    background-image: url(../images/leaf_desktop.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -98,7 +146,7 @@ body {overflow-x: hidden;}
     
     text-align: center;
     height: 350px;
-    background-image: url(../images/cntower.jpg);
+    background-image: url(../images/cntower_opt.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -112,7 +160,7 @@ body {overflow-x: hidden;}
 
 #image3
 {
-    background-image: url(../images/camping.jpg);
+    background-image: url(../images/camping_opt.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -135,28 +183,45 @@ body {overflow-x: hidden;}
 
 #footerlogo
 {
-    height: 50px;
-    width: 50px;
+    height: 150px;
+    width: 150px;
     float: left;
+    margin-left: 30px;
 }
 
 #footernav
 {
-    float: right;
+    text-align: right;
 }
 
 #footernav li
 {
     display: inline;
+    color: white;
+    padding-left: 20px;
 }
 
 .footercon
 {
     position: relative;
+    background-color: #f05d32;
 }
 
 .bottom-left {
     position: absolute;
-    bottom: 8px;
+    bottom: 1px;
     left: 16px;
   }
+
+.bottom-left p 
+{
+    color: #f05d32;
+}
+
+.noflex
+{
+    margin-left: auto;
+    order: 2;
+    margin-right: 30px;
+}
+
