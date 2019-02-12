@@ -36,11 +36,32 @@
 
     
       </div>
-    <router-link :to="{ path: '/form'}">Form</router-link>
-    <router-link :to="{ path: '/promotions'}">Promotions</router-link>
     <transition name="fade" mode="out-in">
         <router-view></router-view>
     </transition>
+
+    <footer id="footer"  class="footercon">
+        
+        <div class="row">
+          <div class="col well">
+            <img src="images/logo-white.svg" id="footerlogo">
+            <ul class="noflex" id="footernav">
+              <li>HOME</li>
+              <li>ABOUT</li>
+              <li>SUBSCRIBE</li>
+              <li>HELP</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col"><img src="images/skyline.png" width="100%"></div>
+        </div>
+
+        <div class="bottom-left"><p>Ontario Summer 2019 Copyright Privacy Policy</p></div>
+        
+
+      </footer>
 </main>
 
 
