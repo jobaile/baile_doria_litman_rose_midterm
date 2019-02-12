@@ -4,6 +4,7 @@
 //IMPORT MODULES
 @import 'modules/_vars';
 @import 'modules/_mixins';
+@import 'modules/_form';
 
 body {overflow-x: hidden;}
 
@@ -218,6 +219,9 @@ body {overflow-x: hidden;}
     background-size: cover;
 }
 
-
-
-
+.noflex
+{
+    margin-left: auto;
+    order: 2;
+    margin-right: 30px;
+}
