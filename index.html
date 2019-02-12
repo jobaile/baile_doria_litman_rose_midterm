@@ -7,18 +7,22 @@
   <title>Ontario Summer</title>
 
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://use.typekit.net/bln4yuu.css"> <!--Futura Font-->
 
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-
+  <!-- Vue -->
   <script src="https://unpkg.com/vue"></script>
   <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 </head>
 <body>
+  <!-- Vue Start -->
   <main id="app">
+    <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
           <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,9 +37,8 @@
               </div>
           </div>
       </nav>
-
-    
-      </div>
+      <!-- Navbar end -->
+      
     <transition name="fade" mode="out-in">
         <router-view></router-view>
     </transition>
@@ -44,23 +47,20 @@
         
         <div class="row">
           <div class="col well">
-            <img src="images/logo-white.svg" id="footerlogo">
+            <img src="images/logo-orange.svg" id="footerlogo">
             <ul class="noflex" id="footernav">
-              <li>HOME</li>
-              <li>ABOUT</li>
-              <li>SUBSCRIBE</li>
-              <li>HELP</li>
+              <a href="#promocontainer"><li>HOME</li></a>
+              <a href="#aboutstart"><li>ABOUT</li></a>
+              <a href="#"><li>SUBSCRIBE</li></a>
+              <a href="#"><li>HELP</li></a>
             </ul>
           </div>
         </div>
 
         <div class="row">
-          <div class="col"><img src="images/skyline.png" width="100%"></div>
+          <div class="col"><img src="images/nature_skyline.png" width="100%"></div>
         </div>
-
-        <div class="bottom-left"><p>Ontario Summer 2019 Copyright Privacy Policy</p></div>
         
-
       </footer>
 </main>
 
