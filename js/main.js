@@ -6,8 +6,8 @@ import formComponent from './components/formComponent.js';
 
 const routes = [
     { path: '/', redirect: {name: 'promotions'}},
-    { path: '/promotions', name: 'promotions', component: promoComponent },
-    { path: '/form', name: 'form', component: formComponent }
+    { path: '/home', name: 'promotions', component: promoComponent },
+    { path: '/signup', name: 'signup', component: formComponent }
 ];
 
 const router = new VueRouter ({
