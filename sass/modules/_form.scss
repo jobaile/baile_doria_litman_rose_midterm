@@ -2,14 +2,16 @@ body {
     font-family: futura;
 }
 
-#footer-top {
+#form-top {
     background-image: url(../images/footer-cover.jpeg);
+    margin-top: -50px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
-    width: 100%;
-    margin-top: -50px;
 }
 
 #up-to-date {
@@ -22,7 +24,9 @@ body {
 #form-slash {
     background-color: $dark-blue;
     margin-top: -80px;
+    padding: 1em;
 }
+
 
 .forminput {
     margin-bottom: 15px;
@@ -61,13 +65,6 @@ body {
     font-size: 14px;
 }
 
-
-// Select styles
-
-div {
-    margin: 20px;
-  }
-  
   .styled-select {
     margin-left: 30px;
     color: $white;
@@ -78,7 +75,6 @@ div {
     overflow: hidden;
     width: 80%;
     border: 2px solid $orange;
-    border-radius: 15px;
   }
   
   .styled-select select {
@@ -129,4 +125,15 @@ div {
     color: $orange;
     cursor: pointer;
     transition-duration: 0.5s;
+}
+
+.button {
+    padding: 0;
+}
+
+
+@media screen and (min-width: 1024px) {
+    form.form-inline {
+        padding-left: 8em;
+    }
 }
