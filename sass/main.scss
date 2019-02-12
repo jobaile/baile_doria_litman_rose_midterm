@@ -1,6 +1,145 @@
 //Before working through SASS, don't forget to add this line to terminal:
-// sass --watch sass/main.scss:css/master.css --style compressed
+// sass --watch sass/main.scss:css/main.css --style compressed
 
 //IMPORT MODULES
 @import 'modules/_vars';
 @import 'modules/_mixins';
+
+body {
+    font-family: futura;
+}
+
+#footer-top {
+    background-image: url(../images/footer-cover.jpeg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    margin-top: -50px;
+}
+
+#up-to-date {
+    padding: 250px 0px 250px 0px;
+    color: $white;
+    text-align: center;
+    font-size: 40px;
+}
+
+#form-slash {
+    background-color: $dark-blue;
+    margin-top: -80px;
+}
+
+.forminput {
+    margin-bottom: 15px;
+    align-content: center;
+}
+
+.margin-top {
+    margin-top: 35px;
+}
+
+@media screen and (min-width: 670px) {
+    #up-to-date {
+        font-size: 70px;
+    }
+}
+
+#register-now {
+    margin: 50px 0px 30px 0px;
+    color: $white;
+    text-align: center;
+}
+
+.form-field {
+    border-color: $orange;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 7px 0px 7px 10px;
+    width: 80%;
+    color: $white;
+    margin-left: 30px;
+}
+
+.form-field::placeholder {
+    color: $white;
+    font-size: 14px;
+}
+
+
+// Select styles
+
+/* -------------------- Page Styles (not required) */
+div {
+    margin: 20px;
+  }
+  
+  /* -------------------- Select Box Styles: bavotasan.com Method (with special adaptations by ericrasch.com) */
+  /* -------------------- Source: http://bavotasan.com/2011/style-select-box-using-only-css/ */
+  .styled-select {
+    margin-left: 30px;
+    color: $white;
+    padding: 7px 0px 7px 25px;
+    font-size: 14px;
+    background: transparent;
+    height: 40px;
+    overflow: hidden;
+    width: 80%;
+    border: 2px solid $orange;
+    border-radius: 15px;
+  }
+  
+  .styled-select select {
+    background: transparent;
+    border: 1px;
+    border-radius: 40px;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+    width: 268px;
+  }
+  
+  .styled-select.slate {
+    background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+    height: 34px;
+    width: 240px;
+  }
+  
+  
+  /* -------------------- Rounded Corners */
+  .rounded {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+  }
+
+
+  
+  /* -------------------- Colors: Text */
+  .slate select {
+    color: #000;
+  }
+
+  
+// Select styles end
+
+#submit {
+    color: $white;
+    padding: 5px 5px 5px 5px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-color: $orange;
+    border-bottom-width: 3px;
+    margin: 10px 0px 50px 0px;
+    text-align: center;
+    background-color: transparent;
+}
+
+#submit:hover {
+    color: $orange;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
